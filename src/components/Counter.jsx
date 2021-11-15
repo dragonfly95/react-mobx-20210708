@@ -17,8 +17,8 @@ const Counter = () => {
     return useObserver(() => (
         <div>
             <h1>{counter.number}</h1>
-            <button onClick={increase}></button>
-            <button onClick={decrease}></button>
+            <button onClick={increase}>+</button>
+            <button onClick={decrease}>-</button>
         </div>
     )) 
 }

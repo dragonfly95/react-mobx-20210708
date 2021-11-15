@@ -16,11 +16,15 @@ const ShopItemList = () => {
     const { market } = useStore();
 
     const onPut = (name, price) => {
+        
         market.put(name, price);
     }
 
     return useObserver(() => {
-        const itemList = items.map((item) => <ShopItem {...item} key={item.name} onPut={onPut}/>);
+        const itemList =
+            items.map((item) => <ShopItem {...item}
+                                          key={item.name}
+                                          onPut={onPut}/>);
         return <div>{itemList}</div>;
     });
 }
